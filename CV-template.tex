@@ -1,0 +1,161 @@
+% Template by Jude Russell
+% For CVs using the Libertine font
+% Modify as needed.
+
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{libertine}
+\usepackage{lipsum}
+
+\pagestyle{empty}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Fancy section headings
+\makeatletter
+\newcommand{\MakeFancyCaps}[1]{%
+  \def\firstletter{\expandafter\@car#1\@nil}%
+  \def\restletters{\expandafter\@cdr#1\@nil}%
+  {\fontsize{11}{12}\selectfont\firstletter}\textsc{\restletters}%
+}
+\makeatother
+
+\titleformat{\section}
+  {\vspace{-4pt}\bfseries\raggedright\large}
+  {}{0em}
+  {\MakeFancyCaps}
+  [\color{black}\titlerule \vspace{-5pt}]
+
+% Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[3]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #3} \\
+    \textit{\small #2} \\
+  \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeEducationHeading}[3]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #3} \\
+    \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+
+
+%  CV TEMPLATE STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \vspace{10pt}
+    \textbf{\Huge \scshape James Clerk Maxwell} \\ \vspace{10pt}
+    \small
+    \faPhone \hspace{.5pt} \href{tel:+440000000000}{+44 0000 000000}
+    \hspace{8pt}
+    \faEnvelope \hspace{.5pt} \href{mailto:james.maxwell@email.com}{james.maxwell@email.com}
+    \hspace{8pt}
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/james-maxwell}{LinkedIn}
+\end{center}
+
+% Education
+\section{Education}
+\vspace{3pt}
+\resumeSubHeadingListStart
+  \resumeEducationHeading
+    {University 1}{MSc in Physics}{Jan 2025 -- Feb 2026}
+  \resumeEducationHeading
+    {University 2}{Year Abroad, Physics}{Mar 2023 -- Apr 2024}
+  \resumeEducationHeading
+    {University 3}{BSc in Physics; First Class Honours}{May 2021 -- Jun 2025}
+\resumeSubHeadingListEnd
+
+% Experience
+\section{Experience}
+\vspace{3pt}
+\resumeSubHeadingListStart
+  
+  \resumeSubheading
+    {Employer 1}{Job Title 1}{Jul 2025 -- Aug 2026}
+  \resumeItemListStart
+    \resumeItem{\lipsum[1][1-4]}
+    \resumeItem{\lipsum[2][1-5]}
+    \resumeItem{\lipsum[3][1-6]}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Employer 2}{Job Title 2}{Sept 2024 -- Oct 2025}
+  \resumeItemListStart
+    \resumeItem{\lipsum[4][1-5]}
+    \resumeItem{\lipsum[5][1-4]}
+    \resumeItem{\lipsum[6][1-6]}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Employer 3}{Job Title 3}{Nov 2023 -- Dec 2024}
+  \resumeItemListStart
+    \resumeItem{\lipsum[7][1-6]}
+    \resumeItem{\lipsum[8][1-4]}
+    \resumeItem{\lipsum[9][1-5]}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% Skills
+\section{Skills}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+    \textbf{Skill Set 1:} \lipsum[13][1-6] \\[4pt]
+    \textbf{Skill Set 2:} \lipsum[14][1-5] \\[4pt]
+    \textbf{Skill Set 2:} \lipsum[15][1-4] \\[4pt]
+}}
+\resumeSubHeadingListEnd
+
+% Awards
+\section{Awards}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+    \textbf{Award 1:} \lipsum[17][1-3] \\[4pt]
+    \textbf{Award 2:} \lipsum[18][1-3] \\[4pt]
+    \textbf{Award 3:} \lipsum[19][1-3]
+}}
+\resumeSubHeadingListEnd
+
+\end{document}
